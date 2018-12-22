@@ -8,6 +8,7 @@ In an existing react-static site run:
 
 ```bash
 $ yarn add react-static-plugin-less
+$ yarn add less less-loader
 ```
 
 Then add the plugin to your `static.config.js`:
@@ -26,7 +27,9 @@ export default {
     [
       "react-static-plugin-less",
       {
-        includePaths: ["..."] // always includes `src/`
+        sourceMap: true,
+        javascriptEnabled: true,
+        // modifyVars: themeVariables,
         // other options for the less-loader
       }
     ]

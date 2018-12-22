@@ -1,19 +1,20 @@
 import ExtractCssChunks from 'extract-css-chunks-webpack-plugin'
-import semver from 'semver'
 
-export default ({ includePaths = [], ...rest }) => ({
+export default ({ sourceMap = true, javascriptEnabled = true, ...rest }) => ({
   webpack: (config, { stage }) => {
     let loaders = []
 
-    const lessLoaderPath = require.resolve('less-loader')
+    // const lessLoaderPath = require.resolve('less-loader')
 
     const lessLoader = {
-        // loader: 'less-loader',
-        loader: lessLoaderPath,
-        options: {
-        sourceMap: true,
+      loader: 'less-loader',
+      // loader: lessLoaderPath,
+      // loader: LessLoader.loader,
+      options: {
+        sourceMap,
+        javascriptEnabled,
         // modifyVars: themeVariables,
-        javascriptEnabled: true,
+        ...rest
       },
     }
     const styleLoader = { loader: 'style-loader' }
