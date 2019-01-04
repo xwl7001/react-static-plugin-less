@@ -1,6 +1,6 @@
 {
-  "name": "react-static-plugin-less",
-  "version": "6.0.10",
+  "name": "@xwl7001/react-static-plugin-less",
+  "version": "1.0.11",
   "description": "A React-Static plugin that adds SSR support for less",
   "main": "node.api.js",
   "repository": "https://github.com/xwl7001/react-static-plugin-less.git",

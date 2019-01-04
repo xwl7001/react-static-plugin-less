@@ -7,15 +7,14 @@ A [React-Static](https://react-static.js.org) plugin that adds loader and SSR su
 In an existing react-static site run:
 
 ```bash
-$ yarn add react-static-plugin-less
-$ yarn add less less-loader
+$ yarn add @xwl7001/react-static-plugin-less
 ```
 
 Then add the plugin to your `static.config.js`:
 
 ```javascript
 export default {
-  plugins: ["react-static-plugin-less"]
+  plugins: ["@xwl7001/react-static-plugin-less"]
 };
 ```
 
@@ -25,7 +24,7 @@ export default {
 export default {
   plugins: [
     [
-      "react-static-plugin-less",
+      "@xwl7001/react-static-plugin-less",
       {
         includePaths: ["..."], // always includes `src/`
         sourceMap: true,
