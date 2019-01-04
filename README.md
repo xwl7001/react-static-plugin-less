@@ -27,6 +27,7 @@ export default {
     [
       "react-static-plugin-less",
       {
+        includePaths: ["..."], // always includes `src/`
         sourceMap: true,
         javascriptEnabled: true,
         // modifyVars: themeVariables,
